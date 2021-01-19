@@ -18,24 +18,15 @@ go:
 
 arch:
   - amd64
-  - arm64
+  - arm64-graviton2
 
 os:
   - linux
-  - osx
-  - windows
 
 jobs:
   allow_failures:
     - go: master
   fast_finish: true
-  exclude:
-    - os: windows
-      go: master
-    - arch: arm64
-      os: osx
-    - arch: arm64
-      os: windows
 
 cache:
   directories:
